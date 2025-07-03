@@ -1,0 +1,60 @@
+
+/*
+Selector: select elements to style
+Declaration Block: part inside {}
+Declaration: set value to specific property (is inside curly braces {})
+Property: specific style attribute top change
+Value: value assigned to property
+*/
+html {                                          /* html = selector. Targets <html> Element */
+    font-size: 10px;                            /* [font-size = 10px;] = declaration */ /* font-size = property */ /* 10px = value */
+    font-family: "Roboto", sans-serif;          /* [font-family = "Roboto", sans-serif;] = declaration */ /* font-family = property */ /* "Roboto", sans-serif = values */
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+/*
+CSS is all about boxes
+Something you'll notice about CSS as you use it more is that a lot of it is about boxes. 
+Most HTML elements on a page can be thought of as boxes that sit on top of (or alongside) other boxes. 
+You can set values on these boxes for size, color, positioning, etc. This is referred to as the box model.
+(Source https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+*/
+
+html {
+  background-color: #00539f;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #ff9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539f;
+  text-shadow: 3px 3px 1px black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539f;
+  text-shadow: 3px 3px 1px black;
+}
+
+
