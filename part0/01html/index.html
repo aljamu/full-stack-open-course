@@ -7,23 +7,117 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <title>full-stack-open-01-html</title> <!-- Set title of page which is usually also shown on browser-tab -->
+    <style>
+      body {
+        /* Center the form on the page */
+        text-align: center;
+      }
+    
+      form {
+        display: inline-block;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
+    
+      p+p {
+        margin-top: 1em;
+      }
+    
+      label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        min-width: 90px;
+        text-align: right;
+      }
+    
+      input,
+      textarea {
+        /* To make sure that all text fields have the same font settings
+         By default, text areas have a monospace font */
+        font: 1em sans-serif;
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+        /* Match form field borders */
+        border: 1px solid #999;
+      }
+    
+      input:focus,
+      textarea:focus {
+        /* Set the outline width and style */
+        outline-style: solid;
+        /* To give a little highlight on active elements */
+        outline-color: #000;
+      }
+    
+      textarea {
+        /* Align multiline text fields with their labels */
+        vertical-align: top;
+        /* Provide space to type some text */
+        height: 5em;
+      }
+    
+      .button {
+        /* Align buttons with the text fields */
+        padding-left: 90px;
+        /* same size as the label elements */
+      }
+    
+      button {
+        /* This extra margin represent roughly the same space as the space
+         between the labels and their text fields */
+        margin-left: 0.5em;
+      }
+    </style>
+
+    <title>full-stack-open-exercises</title> <!-- Set title of page which is usually also shown on browser-tab -->
 </head>
 <body> <!-- Contains all visible content of web page -->
-    <h1>Full Stack Open Course (0.01 HTML)</h1>
+    <h1>Full Stack Open Course (0.1 HTML)</h1>
     <img src="images/firefox_logo.svg" alt="Firefox Logo"> <!-- <img> == element, src/alt == attributes.-->
     <p>This is a single paragraph</p>
     <p>At Mozilla, we're a global community of</p>
+    <ul>
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
+    <p>working together…</p>
+    <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+    <a href="https://fullstackopen.com/en/part0/fundamentals_of_web_apps#exercises-0-1-0-6">Tutorial</a>
+    <hr />
 
-<ul>
-  <li>technologists</li>
-  <li>thinkers</li>
-  <li>builders</li>
-</ul>
+    <!-- ========  FORMS  ========
+    - main point of interaction between user and website/app
+    - allow to enter data -> sent to webserver for processing and storage or immediately update the interface on client side
+    - form vaidation: enforce specific formats or values to be entered
+    -->
+    <h1>0.3 FORMS</h1>
+    <form action="/my-handling-form-page" method="post"> <!-- container element defining a form -->
+      <!-- action attribute: defines location/URL where the forms collected data should be sent to -->
+      <!-- method attribute: defines which HTTP method to send data with (usually get or post)-->
+        <p> 
+          <label for="name">Name:</label> <!-- for value == id value of element the label belongs to. Good practise and lets you click label to interact with asociated element-->
+          <input type="text" id="name" name="user_name" /> <!-- type defines appearence and behaviour of the input -->
+        </p>
+        <p>
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" /> <!-- input = void element. That means, it does not need a closing tag -->
+        </p>
+        <p>
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message"></textarea> <!-- textarea is not a void element. it needs a closing tag -->
+        </p>
+        <p class="button"> <!-- alows to send / submit form -->
+          <button type="submit">Send your message</button> <!-- type: submit (-> send to action value) | reset (->resets all form widgets to default value) | button (->does nothing. Offers more complex and creative buttons. Needs Javascipt)-->
+        </p>
 
-<p>working together…</p>
+    </form>
 
-<a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto></a>
+
+
 
 </body>
 </html>
