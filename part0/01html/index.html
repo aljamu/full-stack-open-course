@@ -71,12 +71,12 @@
         margin-left: 0.5em;
       }
     </style>
-
     <title>full-stack-open-exercises</title> <!-- Set title of page which is usually also shown on browser-tab -->
 </head>
 <body> <!-- Contains all visible content of web page -->
     <h1>Full Stack Open Course (0.1 HTML)</h1>
-    <img src="images/firefox_logo.svg" alt="Firefox Logo"> <!-- <img> == element, src/alt == attributes.-->
+    <img src="images/firefox_logo.svg" alt="Firefox Logo" width="100px"> <!-- <img> == element, src/alt == attributes.-->
+    <p> <strong>click image above to see JavaScript in action</strong> </p>
     <p>This is a single paragraph</p>
     <p>At Mozilla, we're a global community of</p>
     <ul>
@@ -113,11 +113,11 @@
         <p class="button"> <!-- alows to send / submit form -->
           <button type="submit">Send your message</button> <!-- type: submit (-> send to action value) | reset (->resets all form widgets to default value) | button (->does nothing. Offers more complex and creative buttons. Needs Javascipt)-->
         </p>
-
     </form>
-
-
-
-
+    <hr />
+    <h1 id="jsTitle">JavaScript</h1>
+    <button id="btn">Change user</button>
+  
+    <script src="scripts/main.js"></script>
 </body>
 </html>
